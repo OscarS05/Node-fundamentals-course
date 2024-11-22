@@ -10,7 +10,8 @@ function router(req, res){
 
     switch (req.url) {
         case '/hola':
-            res.write('Hi, I already know how to use node.js HTTP');
+            let saludo = hola();
+            res.write(saludo);
             res.end();
             break;
         default:
@@ -22,4 +23,8 @@ function router(req, res){
     // res.writeHead(201, { 'Content-Type': 'text/plain' });
     // res.write('Hi, I already know how to use node.js HTTP');
     // res.end();
+}
+
+function hola() {
+    return 'Hi, I already know how to use node.js HTTP';
 }
